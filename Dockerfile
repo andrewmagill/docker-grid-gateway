@@ -5,26 +5,6 @@ RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.no
 
 RUN yum update -y
 
-########################
-## install python 2.7.10
-########################
-#
-## Install Dependencies
-#RUN yum groupinstall -y 'development tools'
-#RUN yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget
-#
-## Download installer
-#RUN wget https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tar.xz
-#RUN xz -d Python-2.7.10.tar.xz
-#RUN tar -xvf Python-2.7.10.tar
-#RUN cd Python-2.7.10
-#
-## Build
-#RUN ./configure --prefix=/usr/local
-#RUN make
-#RUN make altinstall
-########################
-
 # Install pip
 RUN yum install -y python python-pip
 RUN pip install --upgrade pip
