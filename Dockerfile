@@ -3,8 +3,6 @@ FROM centos:latest
 # Install EPEL
 RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 
-RUN yum update -y
-
 # Install pip
 RUN yum install -y python python-pip
 RUN pip install --upgrade pip
