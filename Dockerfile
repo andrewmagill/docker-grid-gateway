@@ -9,9 +9,6 @@ RUN yum update -y
 RUN yum install -y python python-pip
 RUN pip install --upgrade pip
 
-# Install supervisor
-RUN pip install supervisor
-
 # "For packages that exist in both OSG and EPEL repositories, it is important to prefer the OSG ones or else OSG software installs may fail. Installing the Yum priorities package enables the repository priority system to work."
 # (from https://twiki.grid.iu.edu/bin/view/Documentation/Release3/InstallCertAuth)
 # Install the Yum priorities package:
